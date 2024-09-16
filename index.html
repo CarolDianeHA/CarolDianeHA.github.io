@@ -31,9 +31,19 @@
         canvas {
             display: block;
         }
+
+        .favicon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 130px;
+            height: 120px;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
+    <img src="img/favicon.png" alt="Favicon" class="favicon">
     <h1>Coming Soon!</h1>
     <canvas id="waterCanvas"></canvas>
 <script>
