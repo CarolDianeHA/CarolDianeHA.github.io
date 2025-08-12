@@ -10,13 +10,45 @@ function compartirEnlace() {
       text: text,
       url: url
     }).catch(() => {
-      alert("No se pudo compartir el enlace.");
+      // Si falla el share, intentar copiar el enlace
+      copiarEnlaceAlPortapapeles(url);
     });
   } else {
     // Fallback para desktop o navegadores sin soporte
-    navigator.clipboard.writeText(url);
-    alert("Enlace copiado al portapapeles: " + url);
+    copiarEnlaceAlPortapapeles(url);
   }
+}
+
+// Función auxiliar para copiar el enlace al portapapeles con manejo de errores
+function copiarEnlaceAlPortapapeles(url) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url)
+      .then(() => {
+        alert("Enlace copiado al portapapeles: " + url);
+      })
+      .catch(() => {
+        // Fallback para navegadores que no permiten clipboard
+        copiarManual(url);
+      });
+  } else {
+    copiarManual(url);
+  }
+}
+
+// Fallback manual para copiar el enlace en navegadores antiguos o móviles
+function copiarManual(url) {
+  const tempInput = document.createElement('input');
+  tempInput.value = url;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999); // Para móviles
+  try {
+    document.execCommand('copy');
+    alert("Enlace copiado al portapapeles: " + url);
+  } catch (err) {
+    alert("No se pudo copiar el enlace. Copia manualmente: " + url);
+  }
+  document.body.removeChild(tempInput);
 }
 
 /* Función que muestra la lista de servicios disponibles */
