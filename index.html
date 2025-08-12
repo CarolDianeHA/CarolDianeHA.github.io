@@ -1,98 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta content="dark" name="color-scheme">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HA Technologies</title>
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <style>
-        h1 {
-            text-align: center;
-            font-size: 100px;
-            color: #83151D;
-            position: absolute;
-            top: 43%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #000;
-        }
-
-        canvas {
-            display: block;
-        }
-
-        .favicon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 130px;
-            height: 120px;
-            z-index: 2;
-        }
-    </style>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card</title> <!-- Título que aparece en la pestaña del navegador -->
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- Font Awesome para iconos - Si quieres otros iconos, cambia esta URL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="manifest.json">
+  
+  <!-- Estilos CSS externos -->
+  <link rel="stylesheet" href="index.css">
 </head>
+
+<!-- === ESTRUCTURA HTML === -->
 <body>
-    <img src="img/favicon.png" alt="Favicon" class="favicon">
-    <h1>Coming Soon!</h1>
-    <canvas id="waterCanvas"></canvas>
-<script>
-    const canvas = document.getElementById('waterCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  <!-- Contenedor principal de la tarjeta -->
+  <div class="card">
+    
+    <!-- Sección de imágenes: banner y perfil superpuesta -->
+    <div class="image-container">
+      <!-- Imagen de fondo/banner - CAMBIAR src="images/Banner.png" por tu imagen -->
+      <img src="images/Banner.png" alt="Banner" class="banner">
+      <!-- Imagen de perfil - CAMBIAR src="images/Profile.jpg" por tu foto -->
+      <img src="images/Profile.png" alt="Foto de perfil" class="profile-img">
+    </div>
+    
+    <!-- Información personal -->
+    <h1 class="name">Carol Diane Hernández-Andaluz</h1> <!-- CAMBIAR por tu nombre -->
+    <!-- <p class="titulo">Caguas | Puerto Rico</p> CAMBIAR por tu ubicación -->
+    <p>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."<br>Colin Powell</p> <!--CAMBIAR por tu descripción -->
 
-    const waves = [];
-    const waveCount = 25;
+    <!-- Grilla de botones de contacto/redes sociales -->
+    <div class="button-grid">
+      <!-- Botón de servicios - ejecuta función JavaScript -->
+      <button class="button" onclick="mostrarServicios()">
+        <i class="fas fa-edit"></i> Servicios
+      </button>
+      
+      <!-- Botón de teléfono - CAMBIAR +1234567890 por tu número -->
+      <a class="button" href="tel:+17875868170">
+        <i class="fas fa-phone"></i> Llamar
+      </a>
+      
+      <!-- Botón de WhatsApp - CAMBIAR 1234567890 por tu número -->
+      <a class="button" href="https://wa.me/7875868170">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      
+      <!-- Botón de Instagram - CAMBIAR tuusuario por tu usuario -->
+      <a class="button" href="https://www.instagram.com/hatechnologiespr?igsh=eDY1d3R6MHh6cmVz&utm_source=qr">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      
+      <!-- Botón de Facebook - CAMBIAR tuusuario por tu usuario -->
+      <a class="button" href="https://hatechnologiespr.github.io/">
+        <i class="fas fa-globe"></i> Website
+      </a>
+      
+      <!-- Botón de Email - CAMBIAR correo@ejemplo.com por tu email -->
+      <a class="button" href="mailto:carol.d.hernandez@outlook.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
 
-    for (let i = 0; i < waveCount; i++) {
-        waves.push({
-            y: (canvas.height / 2) - 100 + Math.random() * 200,
-            length: 0.01 + Math.random() * 0.001,
-            amplitude: 50 + Math.random() * 100,
-            frequency: 0.01 + Math.random() * 0.03,
-            phase: Math.random() * Math.PI * 2
-        });
-    }
+    <!-- Botón para compartir (Share) y agregar contacto -->
+    <div style="display: flex; gap: 10px; justify-content: center;">
+      <button class="button-wide" onclick="compartirEnlace()">
+        <i class="fas fa-share-alt"></i> Share
+      </button>
+      <button class="button-wide" onclick="agregarContacto()">
+        <i class="fas fa-user-plus"></i> Agregar contacto
+      </button>
+    </div>
+    
+    <!-- Créditos - CAMBIAR o eliminar si no quieres mostrar -->
+    <p class="powered-by">Powered by HA Technologies</p>
+  </div>
 
-    function animate() {
-        requestAnimationFrame(animate);
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.03)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        waves.forEach((wave, index) => {
-            ctx.beginPath();
-            ctx.moveTo(0, wave.y);
-            for (let i = 0; i < canvas.width; i++) {
-                const yOffset = Math.sin(i * wave.length + wave.phase) * wave.amplitude * Math.sin(wave.phase);
-                ctx.lineTo(i, wave.y + yOffset);
-            }
-            ctx.strokeStyle = `hsl(${index / 2 + 170}, 100%, 50%)`;
-            ctx.stroke();
-            wave.phase += wave.frequency;
-        });
-    }
-
-    animate();
-
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        waves.forEach((wave) => {
-            wave.y = (canvas.height / 2) - 100 + Math.random() * 200;
-        });
-    });
-
-</script>
+  <!-- === JAVASCRIPT EXTERNO === -->
+  <script src="index.js"></script>
 </body>
 </html>
