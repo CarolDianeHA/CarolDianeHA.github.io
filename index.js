@@ -1,7 +1,7 @@
 /* === FUNCIONES JAVASCRIPT === */
 /* Función para compartir el enlace en móviles */
 function compartirEnlace() {
-  const url = window.location.href;
+  const url = "https://caroldianeha.github.io/";
   const title = document.title || "Business Card";
   const text = "¡Mira mi tarjeta de contacto!";
   if (navigator.share) {
