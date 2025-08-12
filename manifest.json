@@ -1,11 +1,11 @@
 {
-    "name": "Borges Jorge Card",
-    "short_name": "BorgesJorge",
+    "name": "Carol Diane HA Card",
+    "short_name": "CarolDianeHA",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#222222",
-    "description": "Business card page for Borges Jorge.",
+    "description": "Business card page for Carol Diane Hernández-Andaluz.",
     "icons": [
         {
             "src": "images/Profile.png",
