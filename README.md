@@ -17,16 +17,19 @@ Una tarjeta de presentación digital moderna y responsiva que permite a los prof
 ## ✨ Características Incluidas
 
 ### 🎨 Diseño Visual
+
 - **Banner personalizable**: Imagen de fondo que representa tu negocio
 - **Foto de perfil**: Imagen circular superpuesta sobre el banner
 - **Diseño responsivo**: Se adapta a dispositivos móviles y desktop
 - **Iconos Font Awesome**: Iconografía profesional para cada botón
 
 ### 👤 Información Personal
+
 - **Nombre completo**: Título principal de la tarjeta
 - **Cita**: Cita de Colin Powell
 
 ### 📞 Botones de Contacto
+
 - **Botón de Servicios**: Muestra lista detallada de servicios disponibles
 - **Llamar**: Enlace directo para realizar llamadas telefónicas
 - **WhatsApp**: Acceso directo al chat de WhatsApp
@@ -37,6 +40,7 @@ Una tarjeta de presentación digital moderna y responsiva que permite a los prof
 - **Agregar Contacto**: Función para descargar información de contacto (vCard)
 
 ### 🔧 Servicios Predefinidos (Ejemplo)
+
 - Chatbots
 - Automatizaciones con IA
 - Desarrollo Web
@@ -54,7 +58,7 @@ Una tarjeta de presentación digital moderna y responsiva que permite a los prof
 
 ## 📁 Estructura del Proyecto
 
-```
+``` text
 BusinessCardPage/
 ├── index.html              # Página principal (GitHub Pages)
 ├── index.css               # Estilos y diseño responsivo
@@ -70,6 +74,7 @@ BusinessCardPage/
 ```
 
 ### 🌐 GitHub Pages
+
 - **URL del sitio**: `https://usuario.github.io/repositorio/` (muestra `index.html`)
 - **Repositorio**: `https://github.com/usuario/repositorio` (muestra `README.md`)
 - **Acceso móvil**: Compatible con dispositivos móviles mediante la URL del sitio
@@ -78,25 +83,30 @@ BusinessCardPage/
 
 Para adaptar la tarjeta a tu negocio, edita los siguientes elementos:
 
-### 📝 **Archivo `index.html`**:
+### 📝 **Archivo `index.html`**
+
 1. **Información personal**: Nombre, ubicación y descripción del negocio
 2. **Enlaces de contacto**: Números de teléfono, redes sociales y email
 3. **Meta tags**: Título, descripción y palabras clave para SEO
 
-### 🎨 **Archivo `index.css`**:
-4. **Colores y fuentes**: Personaliza la paleta de colores y tipografía
-5. **Efectos visuales**: Ajusta sombras, animaciones y transiciones
+### 🎨 **Archivo `index.css`**
 
-### 🔧 **Archivo `index.js`**:
-6. **Lista de servicios**: Modifica los servicios ofrecidos
-7. **Funcionalidades**: Personaliza comportamientos interactivos
+1. **Colores y fuentes**: Personaliza la paleta de colores y tipografía
+2. **Efectos visuales**: Ajusta sombras, animaciones y transiciones
 
-### 🖼️ **Carpeta `images/`**:
-8. **Banner.png**: Reemplaza con imagen representativa del negocio
-9. **Profile.png**: Actualiza con foto profesional del cliente
-10. **favicon.ico**: Cambia el icono del sitio web
+### 🔧 **Archivo `index.js`**
 
-### 🌐 **Configuración GitHub Pages**:
+1. **Lista de servicios**: Modifica los servicios ofrecidos
+2. **Funcionalidades**: Personaliza comportamientos interactivos
+
+### 🖼️ **Carpeta `images/`**
+
+1. **Banner.png**: Reemplaza con imagen representativa del negocio
+2. **Profile.png**: Actualiza con foto profesional del cliente
+3. **favicon.ico**: Cambia el icono del sitio web
+
+### 🌐 **Configuración GitHub Pages**
+
 - Activa GitHub Pages en Settings → Pages → Source: Deploy from a branch
 - Selecciona la rama `main` y carpeta `/ (root)`
 - El sitio estará disponible en: `https://tu-usuario.github.io/nombre-repositorio/`
@@ -111,7 +121,8 @@ Desarrollado por [HA Technologies](https://ha-technologies-pr.vercel.app)
 
 Este proyecto es propiedad intelectual de HA Technologies. El código fuente está disponible públicamente con fines de demostración y uso por parte de clientes autorizados.
 
-### Términos de Uso:
+### Términos de Uso
+
 - ✅ **Uso autorizado**: Clientes de HA Technologies pueden usar este código
 - ✅ **Modificaciones**: Permitidas para personalización del negocio del cliente
 - ❌ **Redistribución**: No se permite la redistribución sin autorización expresa
