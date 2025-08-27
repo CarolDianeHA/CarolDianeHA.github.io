@@ -8,14 +8,14 @@
     "description": "Business card page for Carol Diane Hernández-Andaluz.",
     "icons": [
         {
-            "src": "images/Logo.jpg",
+            "src": "images/HALogo.png",
             "sizes": "192x192",
-            "type": "image/jpg"
+            "type": "image/png"
         },
         {
-            "src": "images/Logo.jpg",
+            "src": "images/HALogo.png",
             "sizes": "512x512",
-            "type": "image/jpg"
+            "type": "image/png"
         }
     ]
 }
