@@ -3,11 +3,9 @@
 function compartirEnlace() {
   const url = "https://caroldianeha.github.io/";
   const title = document.title || "Business Card";
-  const text = "¡Mira mi tarjeta de contacto!";
   if (navigator.share) {
     navigator.share({
       title: title,
-      text: text,
       url: url
     }).catch(() => {
       // Si falla el share, intentar copiar solo el enlace
