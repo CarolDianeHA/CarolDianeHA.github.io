@@ -2,10 +2,8 @@
 /* Función para compartir el enlace en móviles */
 function compartirEnlace() {
   const url = "https://caroldianeha.github.io/";
-  const title = document.title || "Business Card";
   if (navigator.share) {
     navigator.share({
-      title: title,
       url: url
     }).catch(() => {
       // Si falla el share, intentar copiar solo el enlace
