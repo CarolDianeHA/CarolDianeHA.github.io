@@ -22,7 +22,7 @@ function copiarEnlaceAlPortapapeles(url) {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url)
       .then(() => {
-        alert("Enlace copiado al portapapeles");
+        // alert("Enlace copiado al portapapeles");
       })
       .catch(() => {
         // Fallback para navegadores que no permiten clipboard
@@ -42,7 +42,7 @@ function copiarManual(url) {
   tempInput.setSelectionRange(0, 99999); // Para móviles
   try {
     document.execCommand('copy');
-    alert("Enlace copiado al portapapeles");
+    // alert("Enlace copiado al portapapeles");
   } catch (err) {
     alert("No se pudo copiar el enlace. Copia manualmente: " + url);
   }
