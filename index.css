@@ -11,6 +11,10 @@ body {
 /* Contenedor principal de la tarjeta digital */
 .card {
   background-color: #333; /* Fondo de la tarjeta dark - Cambiar a #fff para fondo blanco */
+  background-image: url('images/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   max-width: 500px; /* Ancho máximo aumentado para escritorio */
   margin: auto; /* Centra la tarjeta horizontalmente */
   padding: 30px; /* Más espacio interno para escritorio */
@@ -33,7 +37,7 @@ body {
   max-width: none; /* Sin límite de ancho máximo */
   height: 300px; /* Alto del banner aumentado para escritorio */
   object-fit: cover; /* Hace que la imagen cubra el área sin distorsionarse */
-  object-position: top;
+  object-position: center;
   border-radius: 12px; /* Esquinas redondeadas del banner */
   margin: 0; /* Sin márgenes para ocupar todo el ancho */
   display: block; /* Para que el centrado funcione correctamente */
