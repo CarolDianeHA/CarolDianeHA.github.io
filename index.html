@@ -1,90 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <!-- Configuración básica del documento -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carol Diane HA Business Card</title> <!-- Título que aparece en la pestaña del navegador -->
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  
-  <!-- Font Awesome para iconos - Si quieres otros iconos, cambia esta URL -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carol Diane HA Business Card</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Font Awesome para iconos - Si quieres otros iconos, cambia esta URL -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Manifest para PWA -->
     <link rel="manifest" href="manifest.json">
-  
-  <!-- Estilos CSS externos -->
-  <link rel="stylesheet" href="index.css">
-</head>
 
-<!-- === ESTRUCTURA HTML === -->
-<body>
-  <!-- Contenedor principal de la tarjeta -->
-  <div class="card">
-    
-    <!-- Sección de imágenes: banner y perfil superpuesta -->
-    <div class="image-container">
-      <!-- Imagen de fondo/banner - CAMBIAR src="images/Banner.png" por tu imagen -->
-      <img src="images/Banner.png" alt="Banner" class="banner">
-      <!-- Imagen de perfil - CAMBIAR src="images/Profile.jpg" por tu foto -->
-      <img src="images/Profile.png" alt="Foto de perfil" class="profile-img">
+    <!-- Estilos CSS externos -->
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <!-- === ESTRUCTURA HTML === -->
+  <body>
+    <!-- Contenedor principal de la tarjeta -->
+    <div class="card">
+
+      <!-- Sección de imágenes: banner y perfil superpuesta -->
+      <div class="image-container">
+        <!-- Imagen de fondo/banner - CAMBIAR src="images/Banner.png" por tu imagen -->
+        <img src="images/Banner.png" alt="Banner" class="banner">
+        <!-- Imagen de perfil - CAMBIAR src="images/Profile.jpg" por tu foto -->
+        <img src="images/Profile.png" alt="Foto de perfil" class="profile-img">
+      </div>
+
+      <!-- Información personal -->
+      <h1 class="name">Carol Diane Hernández-Andaluz</h1>
+      <!-- CAMBIAR por tu nombre -->
+      <!-- <p class="titulo">Caguas | Puerto Rico</p> CAMBIAR por tu ubicación -->
+      <p>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."<br>Colin
+        Powell</p> <!--CAMBIAR por tu descripción -->
+
+      <!-- Grilla de botones de contacto/redes sociales -->
+      <div class="button-grid">
+
+        <div class="social-row">
+          <a class="social-btn" href="https://hatechnologiespr.github.io/"
+            aria-label="Facebook">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="social-btn"
+            href="https://www.instagram.com/hatechnologiespr?igsh=eDY1d3R6MHh6cmVz&utm_source=qr"
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="social-btn" href="https://github.com/CarolDianeHA"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/in/caroldianeha"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="social-btn" href="https://wa.me/7875868170"
+          aria-label="Whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+
+        <!-- Botón de servicios - ejecuta función JavaScript -->
+        <button class="button" onclick="mostrarServicios()">
+          <i class="fas fa-edit"></i> Servicios
+        </button>
+
+        <!-- Botón de teléfono - CAMBIAR +1234567890 por tu número -->
+        <a class="button" href="tel:+17875868170">
+          <i class="fas fa-phone"></i> Llamar
+        </a>
+
+        <!-- Botón de Email - CAMBIAR correo@ejemplo.com por tu email -->
+        <a class="button" href="mailto:carol.d.hernandez@outlook.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+
+      <!-- Botón para compartir (Share) y agregar contacto -->
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button class="button-wide" onclick="compartirEnlace()">
+          <i class="fas fa-share-alt"></i> Share
+        </button>
+        <button class="button-wide" onclick="agregarContacto()">
+          <i class="fas fa-user-plus"></i> Agregar contacto
+        </button>
+      </div>
+
+      <!-- Créditos - CAMBIAR o eliminar si no quieres mostrar -->
+      <p class="powered-by">Powered by HA Technologies</p>
     </div>
-    
-    <!-- Información personal -->
-    <h1 class="name">Carol Diane Hernández-Andaluz</h1> <!-- CAMBIAR por tu nombre -->
-    <!-- <p class="titulo">Caguas | Puerto Rico</p> CAMBIAR por tu ubicación -->
-    <p>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."<br>Colin Powell</p> <!--CAMBIAR por tu descripción -->
 
-    <!-- Grilla de botones de contacto/redes sociales -->
-    <div class="button-grid">
-      <!-- Botón de servicios - ejecuta función JavaScript -->
-      <button class="button" onclick="mostrarServicios()">
-        <i class="fas fa-edit"></i> Servicios
-      </button>
-      
-      <!-- Botón de teléfono - CAMBIAR +1234567890 por tu número -->
-      <a class="button" href="tel:+17875868170">
-        <i class="fas fa-phone"></i> Llamar
-      </a>
-      
-      <!-- Botón de WhatsApp - CAMBIAR 1234567890 por tu número -->
-      <a class="button" href="https://wa.me/7875868170">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-      
-      <!-- Botón de Instagram - CAMBIAR tuusuario por tu usuario -->
-      <a class="button" href="https://www.instagram.com/hatechnologiespr?igsh=eDY1d3R6MHh6cmVz&utm_source=qr">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      
-      <!-- Botón de Facebook - CAMBIAR tuusuario por tu usuario -->
-      <a class="button" href="https://hatechnologiespr.github.io/">
-        <i class="fas fa-globe"></i> Website
-      </a>
-      
-      <!-- Botón de Email - CAMBIAR correo@ejemplo.com por tu email -->
-      <a class="button" href="mailto:carol.d.hernandez@outlook.com">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-    </div>
-
-    <!-- Botón para compartir (Share) y agregar contacto -->
-    <div style="display: flex; gap: 10px; justify-content: center;">
-      <button class="button-wide" onclick="compartirEnlace()">
-        <i class="fas fa-share-alt"></i> Share
-      </button>
-      <button class="button-wide" onclick="agregarContacto()">
-        <i class="fas fa-user-plus"></i> Agregar contacto
-      </button>
-    </div>
-    
-    <!-- Créditos - CAMBIAR o eliminar si no quieres mostrar -->
-    <p class="powered-by">Powered by HA Technologies</p>
-  </div>
-
-  <!-- === JAVASCRIPT EXTERNO === -->
-  <script src="index.js"></script>
-</body>
+    <!-- === JAVASCRIPT EXTERNO === -->
+    <script src="index.js"></script>
+  </body>
 </html>

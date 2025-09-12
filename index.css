@@ -1,401 +1,286 @@
 /* === ESTILOS GENERALES === */
-/* Configuración del cuerpo de la página */
 body {
-  font-family: 'Arial', sans-serif; /* Fuente principal - cambiar aquí para otra fuente */
-  background-color: #2c2c2c; /* Background dark - Cambiar a #f2f2f2 para fondo claro */
-  text-align: center; /* Centra todo el contenido */
-  padding: 20px; /* Espacio alrededor de la página */
+  font-family: 'Arial', sans-serif;
+  background-color: #2c2c2c;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
 }
 
 /* === TARJETA PRINCIPAL === */
-/* Contenedor principal de la tarjeta digital */
 .card {
-  background-color: #333; /* Fondo de la tarjeta dark - Cambiar a #fff para fondo blanco */
+  background-color: #333;
   background-image: url('images/Background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 500px; /* Ancho máximo aumentado para escritorio */
-  margin: auto; /* Centra la tarjeta horizontalmente */
-  padding: 30px; /* Más espacio interno para escritorio */
-  border-radius: 12px; /* Esquinas redondeadas - cambiar valor para más/menos redondez */
-  box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra de la tarjeta */
+  max-width: 500px;
+  margin: auto;
+  padding: 28px; /* un poco más compacta */
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.20); /* sombra suave tipo CSS2 */
 }
 
 /* === SECCIÓN DE IMÁGENES === */
-/* Contenedor para el banner y imagen de perfil */
 .image-container {
-  position: relative; /* Permite posicionar elementos hijos absolutamente */
+  position: relative;
   display: inline-block;
-  margin-bottom: 80px; /* Espacio para que el texto no quede tapado por la imagen del perfil */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  margin-bottom: 60px; /* menos aire como CSS2 */
+  width: 100%;
 }
 
-/* Imagen de fondo/banner (imagen de herramientas) */
 .banner {
-  width: 100%; /* Ancho completo de la tarjeta */
-  max-width: none; /* Sin límite de ancho máximo */
-  height: 300px; /* Alto del banner aumentado para escritorio */
-  object-fit: cover; /* Hace que la imagen cubra el área sin distorsionarse */
+  width: 100%;
+  max-width: none;
+  height: 280px; /* similar a CSS2 */
+  object-fit: cover;
   object-position: center;
-  border-radius: 12px; /* Esquinas redondeadas del banner */
-  margin: 0; /* Sin márgenes para ocupar todo el ancho */
-  display: block; /* Para que el centrado funcione correctamente */
+  border-radius: 16px; /* coincide con CSS2 */
+  margin: 0;
+  display: block;
 }
 
-/* Imagen de perfil superpuesta */
 .profile-img {
-  position: absolute; /* Se posiciona sobre el banner */
-  width: 120px; /* Tamaño aumentado para escritorio */
-  height: 120px; /* Tamaño aumentado para escritorio */
-  border-radius: 50%; /* Para imagen cuadrada 8px. Cambiar a 50% para imagen redonda */
-  bottom: -01px; /* Aún más abajo */
-  left: 80%; /* A la derecha */
-  transform: translateX(-50%); /* Centra respecto al punto de referencia */
-  border: 4px solid white; /* Borde blanco alrededor - cambiar color/grosor aquí */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra de la imagen de perfil */
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  bottom: -90px;     /* cae sobre la tarjeta como en CSS2 */
+  right: 20px;       /* anclado a la derecha */
+  left: auto;
+  transform: none;
+  border: 4px solid white; /* mantenemos color */
+  background: #fff;         /* aro limpio */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 /* === TEXTO Y TIPOGRAFÍA === */
-/* Nombre principal */
+h1 {
+  font-size: 22px;
+  line-height: 1.15; /* más compacto */
+  margin: 8px 0 18px;
+  font-weight: 600;  /* presencia similar a CSS2 */
+  color: white;
+}
+
 .name {
-  margin: 10px 0; /* Espacio arriba y abajo del nombre */
-  font-size: 35px; /* Tamaño aumentado para escritorio */
-  color: white; /* Color del nombre/título - Cambiar a #000 para fondo blanco */
-  font-weight: bold; /* Texto en negrita para mayor impacto */
+  margin: 8px 0 10px;
+  font-size: 32px;   /* un poco más compacto */
+  line-height: 1.1;
+  color: white;
+  font-weight: bold;
 }
 
-/* Párrafos generales */
 p {
-  font-size: 16px; /* Tamaño aumentado para escritorio */
-  color: #ccc; /* Color del texto general - Cambiar a #555 para fondo blanco */
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.35; /* estilo más “recogido” */
+  margin: 6px 0;
 }
 
-/* Texto del subtítulo (ubicación) */
 .titulo {
-  color: #aaa; /* Color del subtítulo - Cambiar a #888 para fondo blanco */
-  font-size: 16px; /* Tamaño aumentado para escritorio */
+  color: #aaa;
+  font-size: 16px;
 }
 
-/* Texto "Powered by" al final */
+/* Footer */
 .powered-by {
-  margin-top: 20px; /* Espacio arriba del texto */
-  font-size: 11px; /* Tamaño pequeño y discreto */
-  color: #777; /* Color del texto "Powered by" - Cambiar a #999 para fondo blanco */
-  font-style: italic; /* Texto en cursiva */
-  text-align: center; /* Centrado */
+  margin-top: 14px;
+  font-size: 11px;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  opacity: .95;
 }
 
 /* === BOTONES === */
-/* Contenedor de la grilla de botones */
 .button-grid {
-  display: grid; /* Usa CSS Grid para organizar botones */
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales - cambiar a 2 para 2 columnas */
-  gap: 10px; /* Espacio entre botones - ajustar aquí */
-  margin-top: 15px; /* Espacio arriba de los botones */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
 }
 
-/* Estilo de los botones principales */
+/* Redes sociales */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #83151D; /* mantenemos color */
+  color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 28px; /* presencia tipo CSS2 */
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background .2s, transform .05s, box-shadow .2s;
+}
+.social-btn:hover { background:#a01b25; }          /* solo estilo, mismo tono base */
+.social-btn:active { transform: translateY(1px); }  /* micro-feedback */
+
+/* Botones principales */
 .button {
-  background-color: #83151D; /* Color principal de los botones - Cambiar aquí */
-  color: white; /* Color del texto en los botones - Cambiar aquí */
-  border: none; /* Sin borde */
-  font-size: 16px; /* Tamaño aumentado para escritorio */
-  text-decoration: none; /* Sin subrayado para enlaces */
-  cursor: pointer; /* Cursor de mano al pasar sobre el botón */
-  text-align: center; /* Texto centrado */
-  padding: 16px; /* Más espacio interno para escritorio */
-  border-radius: 12px; /* Esquinas redondeadas */
-  min-height: 56px; /* Altura mínima aumentada */
-  box-sizing: border-box; /* Incluye padding en el tamaño total */
-  display: flex; /* Flexbox para alinear icono y texto */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  gap: 8px; /* Más espacio entre icono y texto */
+  background-color: #83151D; /* mantenemos color */
+  color: white;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 14px 22px;         /* más compacto */
+  border-radius: 26px;        /* píldora como CSS2 */
+  min-height: 56px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;           /* similar a CSS2 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background .2s, transform .05s, box-shadow .2s;
 }
+.button:hover { background-color: #951922; }
+.button:active { transform: translateY(1px); }
 
-/* Tamaño de los iconos dentro de los botones */
-.button i {
-  font-size: 18px; /* Tamaño aumentado para escritorio */
-}
+.button i { font-size: 20px; }
 
-/* Efecto al pasar el cursor sobre los botones */
-.button:hover {
-  background-color: #83151D; /* Color de hover de los botones - Cambiar aquí */
-}
-
-/* Botón ancho (Agregar contacto) */
+/* Botón ancho (beige con borde) */
 .button-wide {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  margin-top: 15px; /* Espacio arriba del botón */
-  padding: 16px; /* Más espacio interno para escritorio */
-  background-color: white; /* Color de fondo del botón ancho - Cambiar aquí */
-  color: #83151D; /* Color del texto del botón ancho - Cambiar aquí */
-  border: 2px solid #83151D; /* Color del borde del botón ancho - Cambiar aquí */
-  font-size: 16px; /* Tamaño aumentado para escritorio */
-  cursor: pointer; /* Cursor de mano */
-  text-align: center; /* Texto centrado */
-  border-radius: 12px; /* Esquinas redondeadas */
-  box-sizing: border-box; /* Incluye padding y border en el tamaño */
-  display: flex; /* Flexbox para alinear contenido */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  gap: 10px; /* Más espacio entre icono y texto */
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 22px;
+  background-color: white;  /* mantenemos color */
+  color: #83151D;           /* mantenemos color */
+  border: 2px solid #83151D;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 26px;      /* píldora */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  min-height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background .2s, transform .05s, box-shadow .2s;
 }
+.button-wide:hover { background-color: #fff5f1; }
+.button-wide:active { transform: translateY(1px); }
 
-/* Icono del botón ancho */
-.button-wide i {
-  font-size: 18px; /* Tamaño aumentado para escritorio */
-}
-
-/* Efecto hover del botón ancho */
-.button-wide:hover {
-  background-color: #fff5f1; /* Color de hover del botón ancho - Cambiar aquí */
-}
+.button-wide i { font-size: 18px; }
 
 /* === RESPONSIVE DESIGN === */
-/* Estilos para dispositivos móviles (pantallas menores a 480px) */
 @media (max-width: 480px) {
-  body {
-    padding: 5px; /* Menos padding en móvil para aprovechar más espacio */
-  }
+  body { padding: 12px; }
 
   .card {
-    max-width: 100%; /* La tarjeta ocupa toda la pantalla disponible */
-    margin: 5px auto; /* Mínimo margen en móvil */
-    padding: 16px; /* Padding optimizado para móvil */
+    max-width: 100%;
+    margin: 5px auto;
+    padding: 16px;
   }
 
-  .image-container {
-    margin-bottom: 50px; /* Espacio optimizado en móvil */
-  }
+  .image-container { margin-bottom: 50px; }
+  .banner { height: 160px; }
+  .profile-img { width: 70px; height: 70px; bottom: -50px; right: 18px; }
 
-  .banner {
-    width: 100%; /* Banner ocupa todo el ancho en móvil */
-    max-width: none; /* Sin límite de ancho */
-    height: 160px; /* Altura optimizada para móvil */
-    /* Los márgenes y centrado se mantienen automáticamente */
-  }
-
-  .profile-img {
-    width: 70px; /* Imagen de perfil optimizada para móvil */
-    height: 70px; /* Altura optimizada */
-    bottom: -50px; /* Posición ajustada para el nuevo tamaño */
-  }
-
-  h1 {
-    font-size: 24px; /* Título legible en móvil */
-    margin: 8px 0; /* Margen optimizado */
-  }
-
-  p {
-    font-size: 14px; /* Texto legible para móvil */
-    line-height: 1.4; /* Mejor espaciado de líneas */
-  }
-
-  .titulo {
-    font-size: 14px; /* Subtítulo legible */
-  }
+  h1 { font-size: 20px; margin: 8px 0 14px; }
+  p { font-size: 14px; line-height: 1.4; }
 
   .button {
-    font-size: 13px; /* Texto de botones legible */
-    padding: 14px 8px; /* Padding optimizado para touch */
-    min-height: 60px; /* Altura mínima para fácil touch */
-    gap: 4px; /* Espacio optimizado entre icono y texto */
+    font-size: 15px;
+    padding: 13px 18px;
+    min-height: 54px;
+    gap: 8px;
   }
 
-  .button i {
-    font-size: 14px; /* Iconos apropiados para móvil */
-  }
+  .button i { font-size: 18px; }
 
-  .button-grid {
-    grid-template-columns: repeat(2, 1fr); /* Solo 2 columnas en móvil */
-    gap: 8px; /* Espacio optimizado entre botones */
-  }
+  .button-grid { grid-template-columns: 1fr; gap: 10px; }
 
   .button-wide {
-    font-size: 14px; /* Texto legible */
-    padding: 18px 12px; /* Padding optimizado para touch */
-    gap: 6px; /* Espacio optimizado entre icono y texto */
-    min-height: 60px; /* Altura consistente con otros botones */
+    font-size: 15px;
+    padding: 13px 18px;
+    gap: 8px;
+    min-height: 54px;
   }
 
-  .button-wide i {
-    font-size: 14px; /* Icono apropiado */
-  }
+  .button-wide i { font-size: 16px; }
 
-  .powered-by {
-    font-size: 10px; /* Texto pequeño y discreto */
-    margin-top: 15px; /* Margen optimizado */
-  }
+  .powered-by { font-size: 10px; margin-top: 12px; }
 }
 
-/* Estilos para pantallas muy pequeñas (menores a 320px) */
 @media (max-width: 320px) {
-  .card {
-    padding: 12px; /* Padding reducido para pantallas muy pequeñas */
-    margin: 2px auto; /* Margen mínimo */
-  }
+  .card { padding: 12px; margin: 2px auto; }
+  .banner { height: 140px; }
 
-  .banner {
-    width: 100%; /* Banner ocupa todo el ancho para pantallas tiny */
-    max-width: none; /* Sin límite de ancho */
-    height: 140px; /* Altura optimizada para pantallas muy pequeñas */
-    /* Los márgenes y centrado se mantienen automáticamente */
-  }
+  .profile-img { width: 60px; height: 60px; bottom: -40px; right: 16px; }
 
-  .profile-img {
-    width: 60px; /* Imagen de perfil muy pequeña */
-    height: 60px;
-    bottom: -40px;
-  }
-
-  h1 {
-    font-size: 20px; /* Título apropiado para pantallas muy pequeñas */
-  }
-
-  p {
-    font-size: 12px; /* Texto más pequeño pero legible */
-    line-height: 1.3;
-  }
-
-  .titulo {
-    font-size: 12px;
-  }
+  h1 { font-size: 18px; margin: 6px 0 12px; }
+  p { font-size: 12px; line-height: 1.3; }
 
   .button {
-    font-size: 11px; /* Texto legible en pantallas pequeñas */
-    padding: 12px 4px; /* Padding reducido */
-    min-height: 56px; /* Altura mínima para touch fácil */
+    font-size: 13px;
+    padding: 12px 14px;
+    min-height: 50px;
+    gap: 6px;
   }
-
-  .button i {
-    font-size: 12px; /* Iconos apropiados */
-  }
+  .button i { font-size: 16px; }
 
   .button-wide {
-    font-size: 12px;
-    padding: 16px 8px;
-    min-height: 56px;
+    font-size: 13px;
+    padding: 12px 14px;
+    min-height: 50px;
   }
-
-  .button-wide i {
-    font-size: 12px;
-  }
+  .button-wide i { font-size: 14px; }
 }
 
-/* Estilos para tablets (entre 481px y 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-  .card {
-    max-width: 480px; /* Tarjeta más ancha en tablets */
-    padding: 28px; /* Más padding por el espacio extra */
-  }
+  .card { max-width: 480px; padding: 24px; }
+  .banner { height: 240px; }
+  .profile-img { width: 110px; height: 110px; bottom: -80px; right: 20px; }
 
-  .banner {
-    width: 100%; /* Banner ocupa todo el ancho en tablets */
-    max-width: none; /* Sin límite de ancho */
-    height: 260px; /* Altura aumentada para tablets */
-    /* Los márgenes y centrado se mantienen automáticamente */
-  }
-
-  .profile-img {
-    width: 110px; /* Tamaño intermedio para tablets */
-    height: 110px;
-  }
-
-  h1 {
-    font-size: 32px; /* Tamaño intermedio para tablets */
-  }
-
-  p {
-    font-size: 15px; /* Tamaño intermedio */
-  }
-
-  .titulo {
-    font-size: 15px;
-  }
+  h1 { font-size: 24px; }
+  p { font-size: 15px; }
 
   .button {
-    font-size: 15px; /* Tamaño intermedio */
-    padding: 15px;
-    min-height: 52px;
-  }
-
-  .button i {
-    font-size: 17px;
-  }
-
-  .button-wide {
     font-size: 15px;
-    padding: 15px;
+    padding: 14px 20px;
+    min-height: 54px;
   }
+  .button i { font-size: 18px; }
 
-  .button-wide i {
-    font-size: 17px;
-  }
+  .button-wide { font-size: 15px; padding: 14px 20px; }
+  .button-wide i { font-size: 18px; }
 
-  .button-grid {
-    grid-template-columns: repeat(3, 1fr); /* Mantener 3 columnas en tablets */
-    gap: 12px; /* Más espacio entre botones */
-  }
+  .button-grid { grid-template-columns: 1fr; gap: 12px; }
 }
 
-/* Estilos para pantallas grandes (escritorio) */
 @media (min-width: 769px) {
-  .card {
-    max-width: 550px; /* Ancho máximo para pantallas grandes */
-    padding: 35px; /* Más padding para escritorio */
-  }
+  .card { max-width: 550px; padding: 32px; }
+  .banner { height: 300px; }
+  .profile-img { width: 130px; height: 130px; bottom: -85px; right: 22px; }
 
-  .banner {
-    height: 300px; /* Altura máxima para escritorio */
-  }
+  h1 { font-size: 26px; }
+  p { font-size: 18px; line-height: 1.5; }
 
-  .profile-img {
-    width: 130px; /* Tamaño máximo para escritorio */
-    height: 130px;
-    bottom: -85px;
-  }
+  .button { font-size: 16px; padding: 16px 22px; }
+  .button i { font-size: 20px; }
 
-  .image-container {
-    margin-bottom: 90px; /* Más espacio en escritorio */
-  }
+  .button-wide { font-size: 16px; padding: 16px 22px; }
+  .button-wide i { font-size: 20px; }
 
-  h1 {
-    font-size: 40px; /* Tamaño máximo para escritorio */
-  }
-
-  p {
-    font-size: 18px; /* Texto más grande para escritorio */
-    line-height: 1.5;
-  }
-
-  .titulo {
-    font-size: 18px;
-  }
-
-  .button {
-    font-size: 17px; /* Texto más grande */
-    padding: 18px;
-    min-height: 60px;
-    gap: 10px;
-  }
-
-  .button i {
-    font-size: 20px; /* Iconos más grandes */
-  }
-
-  .button-wide {
-    font-size: 17px;
-    padding: 18px;
-    gap: 12px;
-  }
-
-  .button-wide i {
-    font-size: 20px;
-  }
-
-  .button-grid {
-    gap: 15px; /* Más espacio entre botones en escritorio */
-  }
+  .button-grid { gap: 14px; }
 }
