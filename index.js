@@ -65,7 +65,7 @@ ORG:HA Technologies
 TEL;TYPE=CELL:787-586-8170
 EMAIL:carol.d.hernandez@outlook.com
 URL:https://hatechnologiespr.github.io/
-ADR:;;Caguas;Puerto Rico;;;
+ADR:;;San Lorenzo;Puerto Rico;;;
 NOTE:Servicios: Chatbots, Automatizaciones con IA, Desarrollo Web, Apps Móviles, Business Intelligence, Tarjetas Digitales y NFC
 END:VCARD`;
 
