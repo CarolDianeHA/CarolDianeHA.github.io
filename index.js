@@ -49,24 +49,18 @@ function copiarManual(url) {
   document.body.removeChild(tempInput);
 }
 
-/* Función que muestra la lista de servicios disponibles */
-/* PARA EDITAR: Cambiar el texto dentro de alert() por tus servicios */
-function mostrarServicios() {
-  alert("Servicios disponibles:\n\n• Chatbots\n• Automatizaciones con IA\n• Desarrollo Web\n• Aplicaciones Moviles\n• Business Intelligence (Reportes PowerBI)\n• Digital Business Cards\n• Tarjetas NFC Personalizadas");
-}
-
 /* Función para agregar contacto - Compatible con móviles */
 function agregarContacto() {
   const vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:Carol Diane Hernández-Andaluz
 N:Hernández-Andaluz;Carol Diane;;;
-ORG:HA Technologies
-TEL;TYPE=CELL:787-907-4295
-EMAIL:HATechnologiesPR@outlook.com
-URL:https://hatechnologiespr.github.io/
-ADR:Puerto Rico;;;
-NOTE:Servicios: Chatbots, Automatizaciones con IA, Desarrollo Web, Apps Móviles, Business Intelligence, Tarjetas Digitales y NFC
+ORG:
+TEL;TYPE=CELL:787-586-8170
+EMAIL:carol.d.hernandez@outlook.com
+URL:https://hatechnologiespr.github.io/CarolDianeHA
+ADR:
+NOTE:
 END:VCARD`;
 
   // Detectar si es un dispositivo móvil
