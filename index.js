@@ -62,10 +62,10 @@ VERSION:3.0
 FN:Carol Diane Hernández-Andaluz
 N:Hernández-Andaluz;Carol Diane;;;
 ORG:HA Technologies
-TEL;TYPE=CELL:787-586-8170
-EMAIL:carol.d.hernandez@outlook.com
+TEL;TYPE=CELL:787-907-4295
+EMAIL:HATechnologiesPR@outlook.com
 URL:https://hatechnologiespr.github.io/
-ADR:;;San Lorenzo;Puerto Rico;;;
+ADR:Puerto Rico;;;
 NOTE:Servicios: Chatbots, Automatizaciones con IA, Desarrollo Web, Apps Móviles, Business Intelligence, Tarjetas Digitales y NFC
 END:VCARD`;
 
